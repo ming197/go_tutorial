@@ -3,14 +3,14 @@ package main
 import "fmt"
 
 func main() {
-    fmt.Println("Hello World!")
+    fmt.Println("Func Main!")
     test()
 }
 
 func init() {
-    fmt.Println("Init!")
+    fmt.Println("Func Init!")
 }
 
 func test() {
-     fmt.Println("test!")
+     fmt.Println("Func Test!")
 }
