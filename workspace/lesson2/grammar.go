@@ -5,8 +5,11 @@ import "fmt"
 /*
 3 ways to define variable
 */
+// 1. var variable_name variable_type = values
 var global_int int = 10
+// 2. var variable_name = values
 var global_str = "hello"
+// 3. variable_name := values, this way can only be used inside a function
 // global_bool := true // this way can only be used inside a function, refer to definition of stock_code3 below
 
 
