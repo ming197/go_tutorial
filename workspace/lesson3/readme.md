@@ -160,22 +160,33 @@ var (
 * 接口：var a interface_type，接口interface，零值是nil
 
   ```go
+  package main
+
+  import "fmt"
+
+  // 定义一个接口
   type Animal interface {
     speak()
   }
-  
+
+  // 定义一个结构体
   type Cat struct {
     name string
-    age int
+    age  int
   }
-  
-  func(cat Cat) speak() {
+
+  // 为 Cat 类型实现 speak 方法
+  func (cat Cat) speak() {
     fmt.Println("miao...")
   }
-  
-  // 定义一个接口变量a
-  var a Animal = Cat{"gaffe", 1}
-  a.speak() // miao...
+
+  func main() {
+    // 定义一个接口变量 a，并赋值一个 Cat 类型的值
+    var a Animal = Cat{"gaffe", 1}
+    // 调用接口的 speak 方法
+    a.speak() // miao...
+  }
+
   ```
 
 * 结构体:  var instance StructName，结构体里每个field的零值是对应field的类型的零值
