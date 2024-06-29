@@ -21,7 +21,7 @@ const (
 	unknown = 0
 	male = 1
 	female = 2
-	super
+	super // super = 2, the same as the value above
 )
 
 const (
@@ -64,6 +64,7 @@ func main() {
 	println("h=", h)
 	println("class value:", class1, class2, class3, class4, class5, class6, class7)
 
+	// iota is the index of the code block
 	const g1 = iota // g=0
 	const g2 = iota 
 	println("g1=", g1, "g2=", g2)
@@ -71,6 +72,7 @@ func main() {
 	const (
 		h1 = 0
 		h2 = iota // h2 is 1
+		// the value of the enum after iota will be increased by 1, if it is not assigned
 		h3 // h3 is 2
 	)
 	println("h1=", h1, "h2=", h2, "h3=", h3)
